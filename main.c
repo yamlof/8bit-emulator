@@ -16,7 +16,8 @@ int main() {
 
     EndDrawing();
   }
-
+  
+  int KB = 1024;
   int FOUR_KB = 4 * KB;
 
   printf("4 KB = %d bytes\n", FOUR_KB);
