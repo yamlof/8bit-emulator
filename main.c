@@ -4,7 +4,7 @@
 int main() {
 
 
-  InitWindow(720, 400, "8 Bit Emulation");
+  InitWindow(64, 32, "8 Bit Emulation");
 
   SetTargetFPS(60);
 
@@ -20,9 +20,15 @@ int main() {
   int KB = 1024;
   int FOUR_KB = 4 * KB;
 
+  char stack[16];
+
   printf("4 KB = %d bytes\n", FOUR_KB);
 
   char memory[FOUR_KB];
+  printf("memory memory address is :%p\n",&memory);
+  char delay_timer[1];
+  char sound_timer[1];
+
 
   char font[] = {
     0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
@@ -41,6 +47,7 @@ int main() {
     0xE0, 0x90, 0x90, 0x90, 0xE0, // D
     0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
     0xF0, 0x80, 0xF0, 0x80, 0x80 };  // F
+
 
     return 0;
 }
